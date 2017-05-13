@@ -70,8 +70,34 @@ namespace WebApiWithDB.Controllers
         }
 
         // DELETE api/employees/5
-        public void Delete(int id)
+        public HttpResponseMessage Delete(int id)
         {
+
+            using (WebApiDB.EmployeesDBEntities entities = new WebApiDB.EmployeesDBEntities())
+            {
+                try
+                {
+                    var entity = entities.Employees.FirstOrDefault(e => e.PersonID == id);
+
+                    if (entity == null)
+                    {
+                        return Request.CreateErrorResponse(HttpStatusCode.NotFound, "Employee with id =" + id + " does not found.");
+                    }
+                    else
+                    {
+                        entities.Employees.Remove(entities.Employees.FirstOrDefault(e => e.PersonID == id));
+                        entities.SaveChanges();
+                        return Request.CreateResponse(HttpStatusCode.OK, entity);
+
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    return Request.CreateErrorResponse(HttpStatusCode.BadRequest, ex);
+
+                }
+            }
 
         }
     }
