@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiWithDB", "WebApiWithDB\WebApiWithDB.csproj", "{7FCA23B5-187B-4070-AD0F-7F4938128B38}"
+	ProjectSection(ProjectDependencies) = postProject
+		{94B230DB-222E-440B-A452-C95C033195FF} = {94B230DB-222E-440B-A452-C95C033195FF}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiDB", "WebApiDB\WebApiDB.csproj", "{94B230DB-222E-440B-A452-C95C033195FF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7FCA23B5-187B-4070-AD0F-7F4938128B38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FCA23B5-187B-4070-AD0F-7F4938128B38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FCA23B5-187B-4070-AD0F-7F4938128B38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FCA23B5-187B-4070-AD0F-7F4938128B38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94B230DB-222E-440B-A452-C95C033195FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94B230DB-222E-440B-A452-C95C033195FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94B230DB-222E-440B-A452-C95C033195FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94B230DB-222E-440B-A452-C95C033195FF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
